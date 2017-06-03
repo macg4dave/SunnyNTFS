@@ -1,0 +1,308 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red64\green128\blue0;\red0\green0\blue255;\red0\green22\blue176;
+\red108\green5\blue211;}
+{\*\expandedcolortbl;;\csgenericrgb\c24999\c50001\c0;\csgenericrgb\c0\c0\c100000;\csgenericrgb\c0\c8655\c68985;
+\csgenericrgb\c42336\c1840\c82832;}
+\pard\tx890\tx1780\tx2670\tx3561\tx4451\tx5341\tx6232\tx7122\tx8012\tx8903\tx9793\tx10683\tx11574\tx12464\tx13354\tx14245\tx15135\tx16025\tx16915\tx17806\tx18696\tx19586\tx20477\tx21367\tx22257\tx23148\tx24038\tx24928\tx25819\tx26709\tx27599\tx28490\tx29380\tx30270\tx31160\tx32051\tx32941\tx33831\tx34722\tx35612\tx36502\tx37393\tx38283\tx39173\tx40064\tx40954\tx41844\tx42735\tx43625\tx44515\tx45405\tx46296\tx47186\tx48076\tx48967\tx49857\tx50747\tx51638\tx52528\tx53418\tx54309\tx55199\tx56089\tx56980\tx57870\tx58760\tx59650\tx60541\tx61431\tx62321\tx63212\tx64102\tx64992\tx65883\tx66773\tx67663\tx68554\tx69444\tx70334\tx71225\tx72115\tx73005\tx73895\tx74786\tx75676\tx76566\tx77457\tx78347\tx79237\tx80128\tx81018\tx81908\tx82799\tx83689\tx84579\tx85470\tx86360\tx87250\tx88140\tx89031\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 set
+\b0  \cf2 num_disk_ntfs\cf0  
+\b to
+\b0  
+\b \cf3 count
+\b0 \cf0  
+\b of
+\b0  \cf2 not_new_mounts_ntfs\cf0 \CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	
+\b repeat
+\b0  
+\b while
+\b0  \cf2 num_disk_ntfs\cf0  > 0\CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		
+\b set
+\b0  \cf2 curr_ntfs\cf0  
+\b to
+\b0  
+\i \cf3 item
+\i0 \cf0  \cf2 num_disk_ntfs\cf0  
+\b of
+\b0  \cf2 not_new_mounts_ntfs\cf0 \CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		
+\b try
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			
+\b set
+\b0  \cf2 not_auto_lines\cf0  
+\b to
+\b0  
+\i \cf3 paragraphs
+\i0 \cf0  
+\b of
+\b0  (
+\b \cf4 read
+\b0 \cf0  
+\i \cf3 POSIX file
+\i0 \cf0  \cf2 found_auto_mount\cf0 )\CocoaLigature0 \
+\CocoaLigature1 			
+\b repeat
+\b0  
+\b with
+\b0  \cf2 get_not_auto_lines\cf0  
+\b in
+\b0  \cf2 not_auto_lines\cf0 \CocoaLigature0 \
+\CocoaLigature1 				
+\b if
+\b0  \cf5 length\cf0  
+\b of
+\b0  \cf2 get_not_auto_lines\cf0  
+\b is
+\b0  
+\b greater than
+\b0  0 
+\b then
+\b0 \CocoaLigature0 \
+\CocoaLigature1 					
+\b set
+\b0  \cf2 all_names_disk\cf0  
+\b to
+\b0  
+\b \cf3 count
+\b0 \cf0  
+\b of
+\b0  
+\b every
+\b0  
+\i \cf3 word
+\i0 \cf0  
+\b of
+\b0  \cf2 get_not_auto_lines\cf0 \CocoaLigature0 \
+\CocoaLigature1 					
+\b set
+\b0  \cf2 all_names_disk\cf0  
+\b to
+\b0  \cf2 all_names_disk\cf0  - 2\CocoaLigature0 \
+\CocoaLigature1 					
+\b set
+\b0  \cf2 all_word\cf0  
+\b to
+\b0  "2"\CocoaLigature0 \
+\CocoaLigature1 					\CocoaLigature0 \
+\CocoaLigature1 					
+\b repeat
+\b0  
+\b while
+\b0  \cf2 all_names_disk\cf0  > 0\CocoaLigature0 \
+\CocoaLigature1 						\CocoaLigature0 \
+\CocoaLigature1 						
+\b set
+\b0  \cf2 remove_first\cf0  
+\b to
+\b0  
+\i \cf3 word
+\i0 \cf0  \cf2 all_word\cf0  
+\b of
+\b0  \cf2 not_auto_lines\cf0 \CocoaLigature0 \
+\CocoaLigature1 						\CocoaLigature0 \
+\CocoaLigature1 						
+\b copy
+\b0  \cf2 remove_first\cf0  
+\b to
+\b0  
+\i \cf3 item
+\i0 \cf0  \cf2 all_names_disk\cf0  
+\b of
+\b0  \cf2 add_words_join\cf0 \CocoaLigature0 \
+\CocoaLigature1 						\CocoaLigature0 \
+\CocoaLigature1 						
+\b set
+\b0  \cf2 all_word\cf0  
+\b to
+\b0  \cf2 all_word\cf0  + 1\CocoaLigature0 \
+\CocoaLigature1 						\CocoaLigature0 \
+\CocoaLigature1 					
+\b end
+\b0  
+\b repeat
+\b0 \CocoaLigature0 \
+\CocoaLigature1 					\CocoaLigature0 \
+\CocoaLigature1 				
+\b end
+\b0  
+\b if
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			
+\b end
+\b0  
+\b repeat
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			\CocoaLigature0 \
+\CocoaLigature1 		
+\b end
+\b0  
+\b try
+\b0 \CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		
+\b set
+\b0  \cf2 num_disk_ntfs\cf0  
+\b to
+\b0  \cf2 num_disk_ntfs\cf0  - 1\CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 	
+\b end
+\b0  
+\b repeat
+\b0 \CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	
+\b set
+\b0  
+\b the
+\b0  \cf2 show\cf0  
+\b to
+\b0  (
+\b \cf4 choose from list
+\b0 \cf0  \cf2 add_words_join\cf0  \cf4 with prompt\cf0  "my auto")\CocoaLigature0 \
+\
+\CocoaLigature1 	
+\b set
+\b0  \cf2 num_new_ntfs\cf0  
+\b to
+\b0  
+\b \cf3 count
+\b0 \cf0  
+\b of
+\b0  \cf2 not_new_mounts_ntfs\cf0 \CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	
+\b repeat
+\b0  
+\b while
+\b0  \cf2 num_new_ntfs\cf0  > 0\CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		
+\b try
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			
+\b set
+\b0  \cf2 found_auto_mount\cf0  
+\b to
+\b0  "/tmp/" & \cf2 unix_user\cf0  & "foundntfsdisklist"\CocoaLigature0 \
+\CocoaLigature1 			\CocoaLigature0 \
+\CocoaLigature1 			
+\b set
+\b0  \cf2 not_auto_lines\cf0  
+\b to
+\b0  
+\i \cf3 paragraphs
+\i0 \cf0  
+\b of
+\b0  (
+\b \cf4 read
+\b0 \cf0  
+\i \cf3 POSIX file
+\i0 \cf0  \cf2 found_auto_mount\cf0 )\CocoaLigature0 \
+\CocoaLigature1 			
+\b repeat
+\b0  
+\b with
+\b0  \cf2 get_not_auto_lines\cf0  
+\b in
+\b0  \cf2 not_auto_lines\cf0 \CocoaLigature0 \
+\CocoaLigature1 				
+\b if
+\b0  \cf5 length\cf0  
+\b of
+\b0  \cf2 get_not_auto_lines\cf0  
+\b is
+\b0  
+\b greater than
+\b0  0 
+\b then
+\b0 \CocoaLigature0 \
+\CocoaLigature1 					\CocoaLigature0 \
+\CocoaLigature1 					
+\b copy
+\b0  \cf2 not_auto_lines\cf0  
+\b to
+\b0  
+\b end
+\b0  
+\b of
+\b0  \cf2 remove_mount\cf0 \CocoaLigature0 \
+\CocoaLigature1 					\CocoaLigature0 \
+\CocoaLigature1 				
+\b end
+\b0  
+\b if
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			
+\b end
+\b0  
+\b repeat
+\b0 \CocoaLigature0 \
+\CocoaLigature1 			\CocoaLigature0 \
+\CocoaLigature1 			
+\b set
+\b0  \cf2 found_disk_list\cf0  
+\b to
+\b0  
+\i \cf3 item
+\i0 \cf0  \cf2 num_new_ntfs\cf0  
+\b of
+\b0  \cf2 remove_mount\cf0 \CocoaLigature0 \
+\CocoaLigature1 			\CocoaLigature0 \
+\CocoaLigature1 			\CocoaLigature0 \
+\CocoaLigature1 			
+\b if
+\b0  \cf2 found_disk_list\cf0  
+\b does not
+\b0  
+\b contain
+\b0  \cf2 found_disk_list\cf0  
+\b then
+\b0 \CocoaLigature0 \
+\CocoaLigature1 				\CocoaLigature0 \
+\CocoaLigature1 				
+\b copy
+\b0  \cf2 found_disk_list\cf0  
+\b to
+\b0  
+\b end
+\b0  
+\b of
+\b0  \cf2 new_mount\cf0 \CocoaLigature0 \
+\CocoaLigature1 				\CocoaLigature0 \
+\CocoaLigature1 			
+\b end
+\b0  
+\b if
+\b0 \CocoaLigature0 \
+\CocoaLigature1 		
+\b end
+\b0  
+\b try
+\b0 \CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		\CocoaLigature0 \
+\CocoaLigature1 		
+\b set
+\b0  \cf2 num_new_ntfs\cf0  
+\b to
+\b0  \cf2 num_new_ntfs\cf0  - 1\CocoaLigature0 \
+\CocoaLigature1 	
+\b end
+\b0  
+\b repeat
+\b0 \CocoaLigature0 \
+\CocoaLigature1 	\CocoaLigature0 \
+\CocoaLigature1 	
+\b \cf4 display dialog
+\b0 \cf0  \cf2 new_mount\cf0 \CocoaLigature0 \
+}
