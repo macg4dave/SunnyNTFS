@@ -11,11 +11,11 @@
 	<key>CFBundleIconFile</key>
 	<string>applet</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.key-test</string>
+	<string>com.apple.ScriptEditor.id.Sun</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>key test</string>
+	<string>Sun</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -29,6 +29,8 @@
 	</dict>
 	<key>LSRequiresCarbon</key>
 	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>G101, David Stringfellow</string>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
@@ -42,9 +44,9 @@
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>355</real>
+		<real>861</real>
 		<key>savedFrame</key>
-		<string>43 215 1182 672 0 0 1920 1178 </string>
+		<string>26 33 1107 1145 0 0 1920 1178 </string>
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
